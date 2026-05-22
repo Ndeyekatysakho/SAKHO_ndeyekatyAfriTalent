@@ -5,23 +5,250 @@
 :root{
     --primary-color:#31572c;
     --secondary-color:#4f772d;
-    --backgroud:#ecf39e;
+    --body:#ecf39e;
     --text:#4f772d;
     --button:#4f772d;
     --paragraph:black;
     --titre:#132a13;
+    --text1:white;
     /* espacements */
     --border-radius-images:30px;
     --border-radius-images:12px;
     --width: 350px;
     --padding: 40px;
-    --border-radius: 12px;
+    --border-radius: 10px;
+    --navbar-height:100px;
     /* police */
     --police-titre:'Montserrat',sans-serif;
     --police-paragraph:'Sora',sans-serif;
+    --h3:'Sora',sans-serif ;
 }
 /* **Reset */
 --reset{
     margin: 0;
     padding: 0;
+}
+*{
+    margin: 0;
+}
+body{
+    margin-top: var(--navbar-height);
+    background:var(--body) ;
+}
+.nav{
+    
+}
+/* hero */
+.hero1{
+    justify-content: space-between;
+    display: flex;
+}
+/* la balisep */
+.text{
+    font-family:var(--police-titre) ;
+}
+.text strong{
+    color: var(--primary-color);
+}
+/* button */
+.btn1{
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+    background:var(--secondary-color) ;
+    color: var(--paragraph);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    transition: 0.3s;
+   margin: 1em 1em 1em;
+}
+.btn btn-outline-warning{
+   margin: 1em 1em 1em;  
+}
+.enrangement{
+    display: flex;
+  gap: 25px;
+}
+.enrangementun{
+position: relative;
+bottom: 200px;
+padding: 12px;
+}
+.enrangementun h2{
+    color: var(--secondary-color);
+    
+}
+.enrangementun h2 i{
+   color: var(--paragraph);
+   font-family: var(--police-titre);
+}
+.enrangementun h3{
+    color: #4f772d ;
+    font-family:var(--h3) ;
+}
+/* images */
+.imagesdebut:before{
+height: 550px;
+border-radius: 40px;
+}
+ .heroimage{
+    overflow: hidden;
+    width: 500px;
+    border-radius: 140px ;
+    transform: rotate(5deg);
+    background: #31572c;
+    transition: 0.5s
+ }
+ .heroimage img{
+    transition: 0.4s;
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  padding: 12px 12px 12px 12px ;
+ }
+ .heroimage:hover img{
+    transform: rotate(9deg);
+ }
+/* comment ça marche */
+.textcentre{
+    text-align: center;
+    bottom: 12px;
+}
+.textcentre h1{
+    font-family:var(--police-titre) ;
+}
+.container1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 150px;
+   
+}
+.deco1{
+    grid-column: span 1;
+    grid-row: span 2;
+    grid-row: 1/3;
+    border-radius: 12px;
+    background: #132a13;
+    color: var(--text1);
+    box-shadow: #132a13;
+text-align: center;
+ margin: 12px;
+}
+.deco2{
+    grid-column: span 3;
+    background: #40633c;
+    border-radius: 12px;
+    color: var(--text1);
+    text-align: center;
+     margin: 12px;
+}
+.deco3{
+    grid-column: span 3;
+    border-radius: 12px;
+    background: #4f772d;
+    color: var(--text1);
+    text-align: center;
+     margin: 12px;
+}
+.deco4{
+   grid-row: span 2;
+    grid-row:1/3;
+    border-radius: 12px;
+    grid-column: -span 2;
+    border-radius: 12px;
+    background: #31572c;
+    color: var(--text1);
+    text-align: center;
+    margin: 12px;
+}
+.deco4 span{
+    left: 12px;
+}
+.deco4 p{
+    width: 300px;
+    height: 150px;
+}
+/* categories de services */
+.nosservices{
+    text-align: center;
+}
+.noir{
+    color: black;
+}
+.nosservices h1{
+    font-family:var(--police-paragraph) ;
+}
+.nosservices h3{
+    font-family:var(--police-titre) ;
+    color: white;
+}
+.hover p{
+    color: white;
+}
+.categories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 25px;
+}
+.categories1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 25px;
+}
+.categories i{
+    font-size: 40px;
+   color: white;
+    margin-bottom: 20px;
+}
+.categories1 i{
+  font-size: 40px;
+    color: #4f772d;
+    margin-bottom: 20px;  
+}
+.hover{
+    background: white;
+    padding: 25px 25px;
+    border-radius: 20px;
+    text-align: center;
+    transform: 0.4s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    margin: 12px;
+    background-color: #4f772d;
+}
+ .hover:hover{
+    transform: translate(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(22, 163,74, 0.25);
+    background: #40633c;
+ }
+ /* temoignages */
+ .montemoin h2{
+font-family:var(--police-paragraph) ;
+ }
+  .montemoin h1{
+    font-family: var(--police-titre);
+  }
+/* section appel a l'action */
+.appel{
+    display: flex;
+    justify-content: space-between;
+    background:#40633c;
+    color: white;
+}
+.appel p{
+    font-family:'Sora' ;
+}
+.appel h3{
+    font-family:'Montserrat' ;
+}
+.appel a{
+    margin-top: 23px;
+}
+/* footer */
+.footer-afri{
+    background: linear-gradient(135deg, #ecf39e,#4f772d);
+    color: white;
+    border-top: 3px solid ,#4f772d;
 }
