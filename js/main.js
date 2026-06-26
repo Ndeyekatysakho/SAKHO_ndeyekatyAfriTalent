@@ -32,4 +32,47 @@ topBtn.onclick = function () {
         behavior: "smooth"
     });
 };
+//conteur java
+const counters = document.querySelectorAll('.counter');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.dataset.target);
+            let count = 0;
+            const updateCounter = () => {
+                const increment = Math.ceil(target / 100);
+                if (count < target) {
+                    count += increment;
+                    if (count > target) {
+                        count = target;
+                    }
+                    counter.textContent = count;
+                    requestAnimationFrame(updateCounter);
+                }
+            };
+            updateCounter();
+            observer.unobserve(counter);
+        }
+    });
+});
+counters.forEach(counter => {
+    observer.observe(counter);
+});
+//fade section
+const fadeSections = document.querySelectorAll(".fade-section");
 
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+fadeSections.forEach(section => {
+    fadeObserver.observe(section);
+});

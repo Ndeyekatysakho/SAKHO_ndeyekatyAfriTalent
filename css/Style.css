@@ -70,7 +70,43 @@ body {
 .btn btn-outline-warning {
     margin: 1em 1em 1em;
 }
-
+@keyframes shake {
+    0%{
+        transform: translateX(0) rotate(0deg);
+    }
+    25%{
+        transform: translateX(500px) rotate(50deg);
+    }
+    50%{
+        transform: translateX(-0px) rotate(-50deg);
+    }
+    75%{
+        transform: translateX(00px) rotate(50deg);
+    }
+    100%{
+        transform: translateX(500) rotate(0deg);
+    }
+}
+/* animation */
+.floter{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #31572c,#4f772d,#132a13);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    /* effet visuel */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    font-size: 25px;
+    font-weight: bold;
+    /* animation */
+    animation: shake 3s infinite ease-in-out;
+    /* petit effet au survol */
+    transition: 0.3s;
+}
+/* FIN DE L'ANIMATION */
 .enrangement {
     display: flex;
     gap: 25px;
@@ -576,4 +612,15 @@ h2{
 
 #topBtn:hover{
     transform: scale(1.1);
+}
+/* commit7 */
+/* pour mon section fade section */
+.fade-section{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-section.show{
+    opacity: 1;
+    transform: translateY(0);
 }
