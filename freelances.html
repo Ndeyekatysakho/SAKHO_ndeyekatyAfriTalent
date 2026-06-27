@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
 </head>
+<body>
  <nav class="navbar navbar-expand-lg navbar-white bg-white" position="fixed"> 
 <div class="container"> 
    <img src="images/LOGO1.PNG" alt="" width="80px" height="auto">
@@ -40,25 +41,22 @@ href="contacts.html">Contact</a></li>
     <i class="bi bi-moon-fill"></i>
 </button>
 </nav>
-<section class="filters">
-            <div>
-                <button class="active">Tous</button>
-                <button>Développement webs</button>
-                <button>Desing UI/UX</button>
-                <button>Marketing Digital</button>
-                <button> Data & IA</button>
-                <button>Analyste de données</button>
-            </div>
-           
-         
-        </section>
-<!-- cartes freelences -->v
+   <section class="filters text-center my-4">
+<button class="filter-btn active" data-filter="all">Tous</button>
+<button class="filter-btn" data-filter="developpement">Développement Web</button>
+<button class="filter-btn" data-filter="design">Design UI/UX</button>
+<button class="filter-btn" data-filter="cyber">Cybersécurité</button>
+<button class="filter-btn" data-filter="ia">Data & IA</button>
+<button class="filter-btn" data-filter="analyse">Analyste de données</button>
+</section>
+<!-- cartes freelences -->
+ <!-- Développeur web -->
     <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 p-3">
+            <div class="col-12 col-md-6 col-lg-4 p-3" data-category="developpement">
                 <div class="card profiles h-100">
                     <img src="images/expertfemme.jpg" class="card-text" alt="" >
                     <div class="card-body">
-                        <h4 class="card-title">fatou sene</h4>
+                        <h4 class="card-title" data-category="Développeur web">fatou sene</h4>
                         <h5>Développeur web</h5>
                         <p class="card-text">Spécialiste en sites modernes.</p>
                         <p class="card-text">Crée des interfaces intuitives et centrées sur l’utilisateur.
@@ -69,11 +67,15 @@ href="contacts.html">Contact</a></li>
      <i class="bi bi-star-fill"></i>
      <i class="bi bi-star-fill"></i>
      <p>5/5</p>
+     <p class="fw-bold">
+            55€/h
+          </p>
                         <button class="btn btn-primary">Voir le profil</button>
                      </div>
                     </div> 
                 </div>
-            <div class="col-12 col-md-6 col-lg-4 p-3">
+                <!-- Designer UI/UX -->
+            <div class="col-12 col-md-6 col-lg-4 p-3" data-category="design">
                 <div class="card profiles h-100">
                     <img src="images/expertfemme1.jpg" class="card-text" alt="" >
                     <div class="card-body">
@@ -87,20 +89,20 @@ href="contacts.html">Contact</a></li>
      <i class="bi bi-star-fill"></i>
      <p>4/5</p>
      <p class="fw-bold">
-            55€/h
+            65€/h
           </p>
                         <button class="btn btn-primary">Voir le profil</button>
 
                     </div> 
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 p-3">
+            <!-- Analyste Cybersécurité -->
+            <div class="col-12 col-md-6 col-lg-4 p-3" data-category="analyse">
                 <div class="card profiles h-100">
                     <img src="images/experthomme4.jpg" class="card-text" alt="" >
                     <div class="card-body">
                         <h4 class="card-title">Papi sow</h4>
                         <h5>Analyste Cybersécurité</h5>
-                
                         <p class="card-text">Surveille les systèmes pour détecter les menaces. Il met en place des mesures de protection.</p>
           <i class="bi bi-star-fill"></i>
    <i class="bi bi-star-fill"></i>
@@ -108,21 +110,20 @@ href="contacts.html">Contact</a></li>
      <i class="bi bi-star-fill"></i>
      <p>4/5</p>
      <p class="fw-bold">
-            55€/h
+            70€/h
           </p>
                         <button class="btn btn-primary">Voir le profil</button>
                     </div> 
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 p-3">
+            <!-- Analyste de donnée -->
+            <div class="col-12 col-md-6 col-lg-4 p-3" data-category="analyse">
                 <div class="card profiles h-100">
                     <img src="images/experthomme.jpg" class="card-text" alt="" >
                     <div class="card-body">
                         <h4 class="card-title">Omar FAYE</h4>
                         <h5>Analyste de données</h5>
-                
                         <p class="card-text">Analyse les données pour en extraire des insights pertinents.
-
   Aide à la prise de décision basée sur les données.</p>
           <i class="bi bi-star-fill"></i>
    <i class="bi bi-star-fill"></i>
@@ -136,13 +137,13 @@ href="contacts.html">Contact</a></li>
                     </div> 
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 p-3">
+            <!-- Administrateur Base de Données -->
+            <div class="col-12 col-md-6 col-lg-4 p-3" data-category="developpement">
                 <div class="card profiles h-100">
                     <img src="images/experthomme3.jpg" class="card-text" alt="" >
                     <div class="card-body">
                         <h4 class="card-title">Babacar Ndiaye</h4>
                         <h5>Administrateur Base de Données</h5>
-                
                         <p class="card-text">Gère, sécurise et optimise les bases de données. Il garantit la disponibilité des informations.</p>
           <i class="bi bi-star-fill"></i>
    <i class="bi bi-star-fill"></i>
@@ -156,13 +157,13 @@ href="contacts.html">Contact</a></li>
                     </div> 
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 p-3">
+            <!-- Administrateur Systèmes et Réseaux -->
+            <div class="col-12 col-md-6 col-lg-4 p-3" data-category="cyber">
                 <div class="card profiles h-100">
                     <img src="images/expertfemme2.jpg" class="card-text" alt="" >
                     <div class="card-body">
                         <h4 class="card-title">Seynabou Diop</h4>
                         <h5>Administrateur Systèmes et Réseaux</h5>
-                
                         <p class="card-text"
 >Gère les serveurs, réseaux et infrastructures informatiques. Il garantit la sécurité et la disponibilité des services</p>
           <i class="bi bi-star-fill"></i>
@@ -177,13 +178,13 @@ href="contacts.html">Contact</a></li>
                     </div> 
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 p-3">
+            <!-- Ingénieur IA -->
+            <div class="col-12 col-md-6 col-lg-4 p-3" data-category="ia">
                 <div class="card profiles h-100">
                     <img src="images/expertfemmeù.jpg" class="card-text" alt="" >
                     <div class="card-body">
                         <h4 class="card-title">justine Diouf</h4>
-                        <h5>Ingénieur IA</h5>
-                
+                        <h5>Ingénieur IA</h5>               
                         <p class="card-text">Développe des solutions basées sur l'intelligence artificielle. Il crée des modèles capables d'automatiser certaines tâches</p>
           <i class="bi bi-star-fill"></i>
    <i class="bi bi-star-fill"></i>
@@ -197,40 +198,40 @@ href="contacts.html">Contact</a></li>
                     </div> 
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 p-3">
+            <!-- Ingénieur Cybersécurité -->
+            <div class="col-12 col-md-6 col-lg-4 p-3" data-category="cyber">
                 <div class="card profiles h-100">
                     <img src="images/expertfemme3.jpg" class="card-text" alt="" >
                     <div class="card-body">
                         <h4 class="card-title">AWA lo</h4>
-                        <h5>Ingénieur Cybersécurité</h5>
-                
+                        <h5>Ingénieur Cybersécurité</h5>               
                         <p class="card-text">Protège les systèmes informatiques contre les cyberattaques. Il identifie et corrige les failles de sécurité</p>
           <i class="bi bi-star-fill"></i>
    <i class="bi bi-star-fill"></i>
     <i class="bi bi-star-fill"></i>
      <i class="bi bi-star-fill"></i>
-     <p>4/5</p>
+      <i class="bi bi-star-fill"></i>
+     <p>5/5</p>
      <p class="fw-bold">
-            55€/h
+            80€/h
           </p>
                         <button class="btn btn-primary">Voir le profil</button>
                     </div> 
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 p-3">
+            <!-- Graphiste -->
+            <div class="col-12 col-md-6 col-lg-4 p-3" data-category="design">
                 <div class="card profiles h-100">
                     <img src="images/experthomme2.jpg" class="card-text" alt="" >
                     <div class="card-body">
                         <h4 class="card-title">Oussmane ly</h4>
-                        <h5>Graphiste</h5>
-                
+                        <h5>Graphiste</h5>               
                         <p class="card-text">Le graphiste conçoit des visuels pour la communication des entreprises et des marques. Il réalise des logos, affiches, brochures et contenus numériques attractifs.</p>
           <i class="bi bi-star-fill"></i>
    <i class="bi bi-star-fill"></i>
     <i class="bi bi-star-fill"></i>
      <i class="bi bi-star-fill"></i>
-  <i class="bi bi-star-fill"></i>
-     <p>/5</p>
+     <p>4/5</p>
      <p class="fw-bold">
             55€/h
           </p>

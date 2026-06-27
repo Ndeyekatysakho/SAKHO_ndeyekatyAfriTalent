@@ -70,6 +70,7 @@ body {
 .btn btn-outline-warning {
     margin: 1em 1em 1em;
 }
+/* Animation */
 @keyframes shake {
     0%{
         transform: translateX(0) rotate(0deg);
@@ -532,10 +533,6 @@ h2{
 /* tablettes */
 @media (min-width:481px) and (max-width : 1024px) {}
 /* commit6 */
-/* Dark mode */
-/* Mode sombre */
-
-/* Mode sombre */
 /* Bouton theme */
 .theme-btn{
     width: 38px;
