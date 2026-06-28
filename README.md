@@ -59,7 +59,6 @@ Les polices utilisées ont été choisies pour :
  Organisation du projet
 
 L’arborescence du dépôt est organisée comme suit :
-
 sakho_ndyekaty_AfriTalent
 ├── css
 │   └── style.css
@@ -124,6 +123,7 @@ Projet réalisé par :
 NDEYE KATY SAKHO
 Projet de développement web - AfriTalent
 <!-- capturesdes images -->
+capture
 <img src="images/expertfemme.jpg" class="card-text" alt="" >
 <img src="images/expertfemme1.jpg" class="card-text" alt="" >
  <img src="images/experthomme4.jpg" class="card-text" alt="" >
