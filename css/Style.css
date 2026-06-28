@@ -70,44 +70,6 @@ body {
 .btn btn-outline-warning {
     margin: 1em 1em 1em;
 }
-/* Animation */
-@keyframes shake {
-    0%{
-        transform: translateX(0) rotate(0deg);
-    }
-    25%{
-        transform: translateX(500px) rotate(50deg);
-    }
-    50%{
-        transform: translateX(-0px) rotate(-50deg);
-    }
-    75%{
-        transform: translateX(00px) rotate(50deg);
-    }
-    100%{
-        transform: translateX(500) rotate(0deg);
-    }
-}
-/* animation */
-.floter{
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #31572c,#4f772d,#132a13);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    /* effet visuel */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    font-size: 25px;
-    font-weight: bold;
-    /* animation */
-    animation: shake 3s infinite ease-in-out;
-    /* petit effet au survol */
-    transition: 0.3s;
-}
-/* FIN DE L'ANIMATION */
 .enrangement {
     display: flex;
     gap: 25px;
@@ -495,43 +457,342 @@ h2{
       background-color: #4f772d;
     color: white
 }
+/* iframe  TAILLE*/
+.mapcontainer{
+    width: 100%;
+    margin-top: 30px;
+}
+.mapcontainer iframe{
+    width: 100%;
+    height: 250px;
+    border: 0;
+    border-radius: 10px;
+}
 /* commit5 */
+/*  Responsivecontact*/
+/* Tablettes */
+@media (max-width: 992px){
+
+    .heri{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contactinfo,
+    .contactform,
+    .mapcontainer{
+        width: 100%;
+    }
+    .navbar .btn{
+        margin-top: 15px;
+        width: 100%;
+    }
+    .theme-btn{
+        margin: 15px auto;
+    }
+}
+/* Téléphones */
+@media (max-width:768px){
+
+    .container2{
+        width: 100%;
+        padding: 20px;
+    }
+    .heri{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .contactinfo,
+    .contactform,
+    .mapcontainer{
+        width: 100%;
+    }
+    .contactform input,
+    .contactform textarea,
+    .contactform select,
+    .contactform button{
+        width: 100%;
+    }
+    .mapcontainer iframe{
+        width: 100%;
+        height: 300px;
+    }
+    .footer-afri{
+        text-align: center;
+    }
+
+    .footer-afri .d-flex{
+        justify-content: center;
+    }
+    .navbar-brand{
+        font-size: 22px;
+    }
+    .navbar img{
+        width: 60px;
+    }
+    #topBtn{
+        width: 40px;
+        height: 40px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+/* Petits téléphones */
+@media (max-width:480px){
+    h1{
+        font-size: 28px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .contactinfo,
+    .contactform{
+        padding: 20px;
+    }
+    .footer-afri{
+        padding: 30px 15px;
+    }
+}
 /* telephone */
-@media (min-width:324px) and (max-width : 480px) {
-    .hero1 {
-        display: grid;
-        grid-template-columns: 1fr;
+/* INDEX RESPONSIVE */
+/* TABLETTE (768px à 991px) */
+@media (max-width: 991px) {
+    .hero1{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
     }
-    .container1 {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-area: auto;
+    .heroimage img{
+        width: 90%;
+        max-width: 500px;
     }
-
-    .deco1 {
-        grid-area: auto;
+    .text h1{
+        font-size: 2.5rem;
     }
-
-    .deco2 {
-        grid-area: auto;
+    .text h2{
+        font-size: 1.2rem;
     }
-
-    .deco3 {
-        grid-area: auto;
+    .enrangement{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
-
-    .deco4 {
-        grid-area: auto;
+    .container1,
+    .categories,
+    .categories1{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .container1 > div,
+    .categories > div,
+    .categories1 > div{
+        width: 45%;
+    }
+    .appel{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .footer-afri .row{
+        text-align: center;
     }
 }
-@media (min-width:324px) and (max-width : 480px) {
-    .heri {
-        display: grid;
-        grid-template-columns: 1fr;
+/* TELEPHONE (moins de 768px) */
+@media (max-width: 767px){
+
+    .navbar-brand{
+        font-size: 1.2rem;
+    }
+    .hero{
+        padding: 30px 15px;
+    }
+    .hero1{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+    }
+    .heroimage img{
+        width:100%;
+        max-width:320px;
+    }
+    .text h1{
+        font-size:2rem;
+    }
+    .text h2{
+        font-size:1rem;
+    }
+    .btn1,
+    .btn-outline-warning{
+        display:block;
+        width:100%;
+        margin:10px 0;
+    }
+    .enrangement{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+        align-items:center;
+    }
+    .container1{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .container1 > div{
+        width:100%;
+    }
+
+    .categories,
+    .categories1{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .categories > div,
+    .categories1 > div{
+        width:100%;
+    }
+
+    .carousel-caption h5{
+        font-size:18px;
+    }
+
+    .carousel-caption h3{
+        font-size:15px;
+    }
+
+    .carousel-caption p{
+        font-size:13px;
+    }
+    .appel{
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+        padding:20px;
+    }
+    .footer-afri{
+        text-align:center;
+    }
+    .footer-afri .d-flex{
+        justify-content:center;
+    }
+    #topBtn{
+        right:15px;
+        bottom:15px;
     }
 }
-/* tablettes */
-@media (min-width:481px) and (max-width : 1024px) {}
+/* TARIFS */
+/* ============================
+   TABLETTE (991px et moins)
+=============================*/
+@media screen and (max-width:991px){
+
+    .displayflex{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:25px;
+    }
+
+    .princincard{
+        width:45%;
+        margin-bottom:20px;
+    }
+
+    #avant{
+        transform:none;
+    }
+
+    .accordion{
+        width:90%;
+        margin:40px auto;
+    }
+
+    .footer-afri{
+        text-align:center;
+    }
+
+    .footer-afri .d-flex{
+        justify-content:center;
+    }
+
+}
+
+/* TELEPHONE (767px et moins)*/
+@media screen and (max-width:767px){
+    .container3{
+        padding:20px;
+    }
+    .TEXTECENTRE h3{
+        font-size:30px;
+    }
+    .TEXTECENTRE p{
+        font-size:16px;
+    }
+    .displayflex{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+    }
+    .princincard{
+        width:100%;
+        max-width:350px;
+    }
+    #avant{
+        transform:none;
+    }
+    .princincard h1{
+        font-size:28px;
+    }
+    .chiffres{
+        font-size:22px;
+    }
+    .lien{
+        display:block;
+        width:100%;
+        text-align:center;
+    }
+    .accordion{
+        width:95%;
+        margin:30px auto;
+    }
+    .accordion-button{
+        font-size:15px;
+    }
+    .accordion-body{
+        font-size:14px;
+    }
+    .footer-afri{
+        text-align:center;
+    }
+    .footer-afri .row{
+        row-gap:20px;
+    }
+    .footer-afri .d-flex{
+        justify-content:center;
+    }
+    #topBtn{
+        right:15px;
+        bottom:15px;
+    }
+    .navbar-brand{
+        font-size:22px;
+    }
+    #themeToggle{
+        margin:10px;
+    }
+}
 /* commit6 */
 /* Bouton theme */
 .theme-btn{
@@ -606,9 +867,14 @@ h2{
     z-index: 1000;
     transition: 0.3s;
 }
-
-#topBtn:hover{
-    transform: scale(1.1);
+.dark-mode .card{
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+}
+.dark-mode .card p,
+.dark-mode .card h5{
+    color: white;
 }
 /* commit7 */
 /* pour mon section fade section */
@@ -621,3 +887,4 @@ h2{
     opacity: 1;
     transform: translateY(0);
 }
+/* commit9 */

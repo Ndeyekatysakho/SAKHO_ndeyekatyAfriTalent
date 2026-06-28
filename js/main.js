@@ -1,5 +1,6 @@
 const themeToggle = document.getElementById("themeToggle");
 // Charger thème sauvegardé
+if(themeToggle){
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
     themeToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
@@ -16,9 +17,10 @@ themeToggle.addEventListener("click", () => {
         themeToggle.innerHTML = '<i class="bi bi-moon-fill"></i>';
     }
 });
+}
 //boutton retour haut de page
 let topBtn = document.getElementById("topBtn");
-
+if(topBtn){
 window.onscroll = function () {
     if (document.documentElement.scrollTop > 200) {
         topBtn.style.display = "block";
@@ -32,6 +34,8 @@ topBtn.onclick = function () {
         behavior: "smooth"
     });
 };
+
+}
 //conteur java
 const counters = document.querySelectorAll('.counter');
 const observer = new IntersectionObserver((entries) => {
@@ -77,7 +81,7 @@ fadeSections.forEach(section => {
 });
 // soumission contact
 const form = document.getElementById("contactform");
-form.addEventListener("submit", function(e){
+if(form){form.addEventListener("submit", function(e){
     e.preventDefault();
     let valide = true;
     document.getElementById("nomerror").textContent = "";
@@ -123,6 +127,7 @@ form.addEventListener("submit", function(e){
         form.reset();
     }
 });
+}
 //chiffres clés
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
@@ -162,8 +167,11 @@ buttons.forEach(button => {
     button.classList.add("active");
     cards.forEach(card => {
       let category = card.getAttribute("data-category").trim();
+
       if (filter === "all" || category === filter) {
+
         card.style.display = ""; 
+
       } else {
         card.style.display = "none";
       }

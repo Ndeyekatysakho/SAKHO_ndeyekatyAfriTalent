@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
+  <!-- nav bar -->
   <nav class="navbar navbar-expand-lg navbar-white bg-white" position="fixed"> 
 <div class="container"> 
-   <img src="images/LOGO1.PNG" alt="" width="80px" height="auto">
+   <img src="images/LOGO1.PNG" alt="" width="80px">
 <a class="navbar-brand" href="index.html">AfriTalent</a> 
 <button class="navbar-toggler" type="button" 
 data-bs-toggle="collapse" 
@@ -30,20 +30,21 @@ href="index.html">Accueil</a></li>
 <li class="nav-item"><a class="nav-link" 
 href="freelances.html">Freelances</a></li> 
 <li class="nav-item"><a class="nav-link" 
-href="tarifs.html">Tarifs</a></li> 
-<li class="nav-item"><a class="nav-link" href="about.html">A 
+href="Tarifs.html">Tarifs</a></li> 
+<li class="nav-item"><a class="nav-link" href="About.html">A 
 propos</a></li> 
 <li class="nav-item"><a class="nav-link" 
 href="contacts.html">Contact</a></li> 
 </ul> 
-<a href="freelances.html" class="btn btn-outline-warning" > <i>Rejoindre AfriTalent</i></a>
+<a href="contacts.html" class="btn btn-outline-warning" > <i>Rejoindre AfriTalent</i></a>
 </div> 
 </div> 
  <button id="themeToggle" class="btn btn-sm theme-btn ms-2">
     <i class="bi bi-moon-fill"></i>
 </button>
 </nav>
-<!-- formulaire -->
+<!-- contact-->
+ <section class="responsivecon">
  <div class="heri">
 <section class="formgroup">
   <div class="container2">
@@ -62,6 +63,7 @@ href="contacts.html">Contact</a></li>
         <p>123 Avenue Lamine GUEYE,Dakar,Sénégal</p>
       </div>
     </div>
+     <!-- formulaire -->
     <div class="contactform">
       <h2>Envoyez un message</h2>
       <form id="contactform">
@@ -82,7 +84,7 @@ href="contacts.html">Contact</a></li>
         </div>
         <div  class="formgroup">
           <h6>Choisir un sujet*</h6>
-         <select id="sujet">
+         <select id="sujet" >
     <option value="">Choisir un sujet</option>
     <option>Freelances</option>
     <option>Entreprise</option>
@@ -100,6 +102,8 @@ href="contacts.html">Contact</a></li>
         </button>
         <div id="successmessage"></div>
       </form>
+      </section>
+      <!-- carte -->
         </div>
       <div class="mapcontainer">
         <iframe
